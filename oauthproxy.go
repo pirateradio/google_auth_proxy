@@ -299,7 +299,7 @@ func (p *OauthProxy) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 	if req.Header.Get("X-Real-IP") != "" {
 		remoteAddr += fmt.Sprintf(" (%q)", req.Header.Get("X-Real-IP"))
 	}
-	log.Printf("%s %s %s", remoteAddr, req.Method, req.URL.RequestURI())
+	// log.Printf("%s %s %s", remoteAddr, req.Method, req.URL.RequestURI())
 
 	var ok bool
 	var user string
